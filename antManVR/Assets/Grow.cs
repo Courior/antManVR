@@ -1,9 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using NewtonVR;
 
 
-public class Shrink : MonoBehaviour {
+public class Grow : MonoBehaviour {
 	public Color LineColor;
 	public float LineWidth = 0.02f;
 	private PlayerStatus status;
@@ -62,9 +62,9 @@ public class Shrink : MonoBehaviour {
 									offset.y = 0;
 
 									NVRPlayer.Instance.transform.position = hitInfo.point - offset;
-									if(!status.shrunk){
-										NVRPlayer.Instance.transform.localScale = new Vector3(0.1F, 0.1F, 0.1F);
-										status.shrunk = true;
+									if(status.shrunk){
+										NVRPlayer.Instance.transform.localScale = new Vector3(1F, 1F, 1F);
+										status.shrunk = false;
 									}
 									if (LHandInteractable != null)
 									{
@@ -85,9 +85,9 @@ public class Shrink : MonoBehaviour {
 			else if(Hand != null && Hand.Inputs[Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad].PressDown){
 				NVRInteractable LHandInteractable = NVRPlayer.Instance.LeftHand.CurrentlyInteracting;
 				NVRInteractable RHandInteractable = NVRPlayer.Instance.RightHand.CurrentlyInteracting;
-				if(!status.shrunk){
-					NVRPlayer.Instance.transform.localScale = new Vector3(0.1F, 0.1F, 0.1F);
-					status.shrunk = true;
+				if(status.shrunk){
+					NVRPlayer.Instance.transform.localScale = new Vector3(1F, 1F, 1F);
+					status.shrunk = false;
 				}
 				if (LHandInteractable != null)
 				{
