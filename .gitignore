@@ -54,9 +54,9 @@ Temporary Items
 /[Bb]uilds/
 /Assets/AssetStoreTools*
 
-antManVR/[Ll]ibrary/
+antManVR/Library/**
 antManVR/Library/
-antManVR/Temp/
+antManVR/Temp/**
 /antManVR/[Oo]bj/
 /antManVR/[Bb]uild/
 /antManVR/[Bb]uilds/
@@ -84,3 +84,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+antManVR/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+antManVR/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+antManVR/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll.mdb
+antManVR/Library/metadata/00/00000000000000006100000000000000
