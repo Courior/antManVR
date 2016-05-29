@@ -47,14 +47,16 @@ Temporary Items
 .apdisk
 
 /[Ll]ibrary/
+/Library/
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
 
-/antManVR/[Ll]ibrary/
-/antManVR/Temp/
+antManVR/[Ll]ibrary/
+antManVR/Library/
+antManVR/Temp/
 /antManVR/[Oo]bj/
 /antManVR/[Bb]uild/
 /antManVR/[Bb]uilds/
