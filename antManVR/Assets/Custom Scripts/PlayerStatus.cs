@@ -3,7 +3,9 @@ using System.Collections;
 using VRTK;
 
 public class PlayerStatus : MonoBehaviour {
-	private bool _shrunk;
+	[SerializeField] private bool _shrunk;
+	[SerializeField] private GameObject _antMan;
+
 	public bool shrunk {
 		get { return _shrunk; }
 		set{
@@ -11,17 +13,16 @@ public class PlayerStatus : MonoBehaviour {
 				return;
 			else
 				_shrunk = value;
-				this.ChangeSize(value);
+			this.ChangeSize(value);
 		}
 
 	}
 	private void ChangeSize(bool shrink){
-		GameObject antMan = GameObject.Find("PlayerObject_[CameraRig]");
-		if (antMan != null) {
+		if (_antMan != null) {
 			if (!shrink) {
-				antMan.transform.localScale = new Vector3(1F, 1F, 1F);	
+				_antMan.transform.localScale = new Vector3(1F, 1F, 1F);	
 			} else {
-				antMan.transform.localScale = new Vector3(0.1F, 0.1F, 0.1F);	
+				_antMan.transform.localScale = new Vector3(0.1F, 0.1F, 0.1F);	
 			}
 		}
 		else{
